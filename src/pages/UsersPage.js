@@ -12,7 +12,7 @@ import {
   Button,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { UserTable } from "../components/UserTable";
+import { UserTable } from "./components/UserTable";
 import axios from "axios";
 
 const UsersPage = () => {
@@ -21,7 +21,7 @@ const UsersPage = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/users`).then((response) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/usuarios`).then((response) => {
       setUsers(response.data);
     });
   }, []);

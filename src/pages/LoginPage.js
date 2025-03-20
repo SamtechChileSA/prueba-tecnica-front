@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container, Box, Typography } from "@mui/material";
 import { Login } from "../components/Login";
-import axios from "axios";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +11,7 @@ const LoginPage = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/login`,
+        `${process.env.REACT_APP_API_URL}/log-in`,
         {
           email,
           password,
@@ -34,7 +33,7 @@ const LoginPage = () => {
         <Login
           email={email}
           password={password}
-          handleLogin={handleLogin}
+          // handleLogin={handleLogin}
           setEmail={setEmail}
           setPassword={setPassword}
         />

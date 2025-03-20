@@ -25,7 +25,7 @@ export const UserTable = ({ users }) => {
             <TableRow key={user.id}>
               <TableCell>{user.id}</TableCell>
               <TableCell>{user.name}</TableCell>
-              <TableCell>{user.email}</TableCell>
+              <TableCell>{user.name}</TableCell>
             </TableRow>
           ))}
         </TableBody>
