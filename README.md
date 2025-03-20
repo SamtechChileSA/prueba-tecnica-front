@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# React Frontend - Prueba técnica
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es un frontend desarrollado con **React** y **Material UI**. Se conecta con un backend en **Node.js** y permite realizar autenticación, listar usuarios y crear nuevos usuarios.
 
-## Available Scripts
+## Requisitos Previos
 
-In the project directory, you can run:
+Asegúrate de tener instalado lo siguiente:
 
-### `npm start`
+- [Node.js](https://nodejs.org/) (versión 16 o superior)
+- npm (se instala con Node.js)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Instalación y Configuración
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clonar el repositorio**
 
-### `npm test`
+   ```sh
+   git clone <URL_DEL_REPOSITORIO>
+   cd prueba-tecnica-front
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Instalar dependencias**
 
-### `npm run build`
+   ```sh
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Configurar variables de entorno**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Copia el archivo de ejemplo y renómbralo como `.env`:
+     ```sh
+     cp .env.example .env
+     ```
+   - Abre `.env` y define la URL del backend:
+     ```sh
+     REACT_APP_API_URL=http://localhost:5005
+     ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Iniciar la aplicación**
+   ```sh
+   npm start
+   ```
+   La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
+## Funcionalidades
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Inicio de sesión** con credenciales predefinidas.
+- **Listado de usuarios** obtenidos desde el backend.
+- **Creación de nuevos usuarios**, enviando los datos al backend.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tecnologías Usadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React
+- Material UI
+- Axios
+- React Router
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### Credenciales de Prueba
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para iniciar sesión, usa:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+Email: admin@test.com
+Contraseña: 123456
+```
 
-### Code Splitting
+**Nota:** Para que el frontend funcione correctamente, asegúrate de que el backend esté corriendo. Sigue las instrucciones en el README del backend para iniciarlo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Troubleshooting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Si tienes problemas:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Asegúrate de que `node_modules` está instalado: `npm install`
+- Verifica que el backend esté corriendo en `http://localhost:5005`
+- Revisa la consola del navegador para errores en la red (`F12 > Console`)
