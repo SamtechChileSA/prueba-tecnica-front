@@ -10,6 +10,7 @@ import {
 import React from "react";
 
 export const UserTable = ({ users }) => {
+  const normalizedUsers = Array.isArray(users) ? users : [users];
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -21,11 +22,11 @@ export const UserTable = ({ users }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => (
+          {normalizedUsers.map((user) => (
             <TableRow key={user.id}>
               <TableCell>{user.id}</TableCell>
               <TableCell>{user.name}</TableCell>
-              <TableCell>{user.name}</TableCell>
+              <TableCell>{user.email}</TableCell>
             </TableRow>
           ))}
         </TableBody>
